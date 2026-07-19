@@ -97,15 +97,15 @@ pnpm dev
 
 ### Home Page
 
-![Home](screenshots/home.png)
+![Home](Screenshots/home.png)
 
 ### Architecture
 
-![Architecture](screenshots/architecture.png)
+![Architecture](Screenshots/architecture.png)
 
 ### Playground
 
-![Playground](screenshots/playground.png)
+![Playground](Screenshots/playground.png)
 
 ---
 
