@@ -1,124 +1,174 @@
-# AI Applications in Information Systems — Research Platform
+# 🤖 AI-IS Research Platform
 
-An interactive web platform for the IEEE-accepted research paper **"AI Applications in Information Systems"** by T. Rajitha Madhu Priya, Ramya M, Md Ankushavali, and Ridhi Jain.
-
-Explore 15 AI paradigms, system architectures, performance benchmarks, and use the ML Playground to analyze your own datasets.
+An interactive AI-powered educational platform that explores **Artificial Intelligence Applications in Information Systems**. The platform provides detailed information about AI architectures, techniques, performance evaluation, research directions, mathematical formulas, and an interactive ML playground.
 
 ---
 
-## Features
+## 📌 Features
 
-- **Overview** — Paper summary, authors, and key contributions
-- **Architecture** — Visual breakdown of AI system components
-- **Techniques** — All 15 AI paradigms covered in the paper
-- **Performance** — Benchmark charts and comparisons
-- **Research** — Citations and related work
-- **Formulas** — Key mathematical foundations
-- **ML Playground** — Upload a CSV dataset, run real ML models, and get a recommendation on which paradigm best fits your data
-- **Auth** — Signup / Login with persistent sessions (PostgreSQL-backed)
-
----
-
-## Tech Stack
-
-| Layer | Technology |
-|---|---|
-| Frontend | React 18, Vite, TypeScript, Tailwind CSS, Framer Motion, Recharts, Wouter |
-| Backend | Node.js 24, Express 5, TypeScript |
-| Database | PostgreSQL + Drizzle ORM |
-| Auth | express-session + connect-pg-simple + bcrypt |
-| API | OpenAPI spec → Orval codegen (React Query hooks + Zod schemas) |
-| Monorepo | pnpm workspaces |
+- 🏠 Modern Landing Page
+- 🧠 AI Architecture Overview
+- ⚙️ AI Techniques
+- 📈 Performance Analysis
+- 📚 Research Section
+- 🧮 Mathematical Formulas
+- 🎮 Interactive ML Playground
+- 🔐 User Authentication
+- 📱 Responsive UI
+- 🌙 Modern Dark Theme
 
 ---
 
-## Project Structure
+## 🛠️ Tech Stack
+
+### Frontend
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- Wouter
+- React Query
+- Radix UI
+- Framer Motion
+
+### Backend
+- Node.js
+- Express.js
+- TypeScript
+
+### Database
+- PostgreSQL
+- Drizzle ORM
+
+### Authentication
+- Express Session
+- PostgreSQL Session Store
+
+### Deployment
+- Replit Deployments
+
+---
+
+## 📂 Project Structure
 
 ```
+Intelligent-System-Architect/
+│
+├── api-server/                 # Express Backend
 ├── artifacts/
-│   ├── ai-is-platform/   # React + Vite frontend
-│   └── api-server/       # Express API server
-├── lib/
-│   ├── api-spec/         # OpenAPI spec (source of truth)
-│   ├── api-client-react/ # Generated React Query hooks
-│   ├── api-zod/          # Generated Zod schemas
-│   └── db/               # Drizzle ORM schema + migrations
-└── scripts/              # Shared build scripts
+│   └── ai-is-platform/         # React Frontend
+├── lib/                        # Shared Libraries
+├── scripts/
+├── pnpm-workspace.yaml
+└── package.json
 ```
 
 ---
 
-## Getting Started (Local)
+## 🚀 Installation
 
-### Prerequisites
-
-- Node.js 20+ — [nodejs.org](https://nodejs.org)
-- pnpm — `npm install -g pnpm`
-- PostgreSQL database (local or [Neon free tier](https://neon.tech))
-- Git Bash (Windows) or any Unix shell
-
-### 1. Clone & install
+### Clone Repository
 
 ```bash
-git clone https://github.com/your-username/your-repo.git
-cd your-repo
+git clone https://github.com/ridhiambala87/ai-is-platform.git
+```
+
+Go into the project
+
+```bash
+cd Intelligent-System-Architect
+```
+
+Install dependencies
+
+```bash
 pnpm install
 ```
 
-### 2. Environment variables
-
-Create a `.env` file in the project root:
-
-```env
-DATABASE_URL=postgresql://user:password@host/dbname?sslmode=require
-SESSION_SECRET=your_long_random_secret_here
-```
-
-Generate a secure SESSION_SECRET:
-```bash
-node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
-```
-
-### 3. Push the database schema
+Run the project
 
 ```bash
-pnpm --filter @workspace/db run push
-```
-
-### 4. Run the servers
-
-Open two terminals:
-
-```bash
-# Terminal 1 — API server (port 8080)
-pnpm --filter @workspace/api-server run dev
-
-# Terminal 2 — Frontend (port 5173)
-pnpm --filter @workspace/ai-is-platform run dev
-```
-
-Open [http://localhost:5173](http://localhost:5173) in your browser.
-
----
-
-## Useful Commands
-
-```bash
-pnpm run typecheck                          # Full typecheck across all packages
-pnpm run build                              # Build all packages
-pnpm --filter @workspace/api-spec run codegen   # Regenerate API hooks from OpenAPI spec
-pnpm --filter @workspace/db run push        # Push DB schema changes (dev only)
+pnpm dev
 ```
 
 ---
 
-## ML Playground
+## 📸 Screenshots
 
-1. Sign up / log in
-2. Navigate to **ML Playground**
-3. Upload any CSV file
-4. Select the target column (what you want to predict)
-5. The engine runs KNN, Naive Bayes, and Logistic/Linear Regression on your data
-6. All 15 paper paradigms are scored and ranked for your dataset
+### Home Page
 
-> Max 2,000 rows are used for training. Numeric columns are auto-detected.
+![Home](screenshots/home.png)
+
+### Architecture
+
+![Architecture](screenshots/architecture.png)
+
+### Playground
+
+![Playground](screenshots/playground.png)
+
+---
+
+## 📖 Modules
+
+- Overview
+- AI Architectures
+- AI Techniques
+- Performance Metrics
+- Research Papers
+- Mathematical Formulas
+- ML Playground
+- Authentication
+
+---
+
+## 🎯 Objectives
+
+- Provide an educational platform for AI in Information Systems.
+- Present modern AI architectures and techniques.
+- Explore current IEEE research trends.
+- Offer an interactive learning experience.
+- Demonstrate practical AI concepts through examples.
+
+---
+
+## 📚 Future Enhancements
+
+- AI Chatbot Integration
+- Research Paper Recommendation System
+- Quiz Module
+- Progress Tracking
+- User Dashboard
+- Certificate Generation
+- Admin Panel
+- Dark/Light Theme Toggle
+
+---
+
+## 🌐 Live Demo
+
+**Replit Deployment**
+
+https://intelligent-system-architect--ridhiambala87.replit.app
+
+---
+
+## 📂 GitHub Repository
+
+https://github.com/ridhiambala87/ai-is-platform
+
+---
+
+## 📄 License
+
+This project is developed for educational and research purposes.
+
+---
+
+## ⭐ Support
+
+If you found this project helpful, please consider giving it a ⭐ on GitHub.
+
+---
+
+Made by Ridhi Jain
