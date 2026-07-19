@@ -1,0 +1,52 @@
+import "./env"; // MUST be first — loads .env before @workspace/db evaluates
+import app from "./app";
+import { logger } from "./lib/logger";
+import { pool } from "@workspace/db";
+
+// connect-pg-simple relies on a table.sql file that esbuild doesn't bundle.
+// Create the session table manually at startup instead.
+const SESSION_TABLE_SQL = `
+  CREATE TABLE IF NOT EXISTS "session" (
+    "sid" varchar NOT NULL COLLATE "default",
+    "sess" json NOT NULL,
+    "expire" timestamp(6) NOT NULL,
+    CONSTRAINT "session_pkey" PRIMARY KEY ("sid") NOT DEFERRABLE INITIALLY IMMEDIATE
+  ) WITH (OIDS=FALSE);
+  CREATE INDEX IF NOT EXISTS "IDX_session_expire" ON "session" ("expire");
+`;
+
+const rawPort = process.env["PORT"];
+
+if (!rawPort) {
+  throw new Error("PORT environment variable is required but was not provided.");
+}
+
+const port = Number(rawPort);
+
+if (Number.isNaN(port) || port <= 0) {
+  throw new Error(`Invalid PORT value: "${rawPort}"`);
+}
+
+async function main() {
+  // Ensure session table exists before accepting requests
+  const client = await pool.connect();
+  try {
+    await client.query(SESSION_TABLE_SQL);
+    logger.info("Session table ready");
+  } finally {
+    client.release();
+  }
+
+  app.listen(port, (err) => {
+    if (err) {
+      logger.error({ err }, "Error listening on port");
+      process.exit(1);
+    }
+    logger.info({ port }, "Server listening");
+  });
+}
+
+main().catch((err) => {
+  logger.error({ err }, "Startup failed");
+  process.exit(1);
+});
