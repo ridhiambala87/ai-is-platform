@@ -1,25 +1,25 @@
-# 🤖 AI-IS Research Platform
+# AI-IS Research Platform
 
 An interactive AI-powered educational platform that explores **Artificial Intelligence Applications in Information Systems**. The platform provides detailed information about AI architectures, techniques, performance evaluation, research directions, mathematical formulas, and an interactive ML playground.
 
 ---
 
-## 📌 Features
+## Features
 
-- 🏠 Modern Landing Page
-- 🧠 AI Architecture Overview
-- ⚙️ AI Techniques
-- 📈 Performance Analysis
-- 📚 Research Section
-- 🧮 Mathematical Formulas
-- 🎮 Interactive ML Playground
-- 🔐 User Authentication
-- 📱 Responsive UI
-- 🌙 Modern Dark Theme
+- Modern Landing Page
+- AI Architecture Overview
+- AI Techniques
+- Performance Analysis
+- Research Section
+- Mathematical Formulas
+- Interactive ML Playground
+- User Authentication
+- Responsive UI
+- Modern Dark Theme
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
 - React
@@ -49,7 +49,7 @@ An interactive AI-powered educational platform that explores **Artificial Intell
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 Intelligent-System-Architect/
@@ -65,7 +65,7 @@ Intelligent-System-Architect/
 
 ---
 
-## 🚀 Installation
+## Installation
 
 ### Clone Repository
 
@@ -93,7 +93,7 @@ pnpm dev
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 ### Home Page
 
@@ -109,7 +109,7 @@ pnpm dev
 
 ---
 
-## 📖 Modules
+## Modules
 
 - Overview
 - AI Architectures
@@ -122,7 +122,7 @@ pnpm dev
 
 ---
 
-## 🎯 Objectives
+## Objectives
 
 - Provide an educational platform for AI in Information Systems.
 - Present modern AI architectures and techniques.
@@ -132,7 +132,7 @@ pnpm dev
 
 ---
 
-## 📚 Future Enhancements
+## Future Enhancements
 
 - AI Chatbot Integration
 - Research Paper Recommendation System
@@ -145,7 +145,7 @@ pnpm dev
 
 ---
 
-## 🌐 Live Demo
+## Live Demo
 
 **Replit Deployment**
 
@@ -153,19 +153,19 @@ https://intelligent-system-architect--ridhiambala87.replit.app
 
 ---
 
-## 📂 GitHub Repository
+## GitHub Repository
 
 https://github.com/ridhiambala87/ai-is-platform
 
 ---
 
-## 📄 License
+## License
 
 This project is developed for educational and research purposes.
 
 ---
 
-## ⭐ Support
+##  Support
 
 If you found this project helpful, please consider giving it a ⭐ on GitHub.
 
